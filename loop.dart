@@ -26,7 +26,7 @@ main() {
       condicao = false;
       print("---Programa Finalizado---");
     } else {
-      print("---Voce digitou: $text");
+      print("---Voce   digitou: $text");
     }
   }
 }
