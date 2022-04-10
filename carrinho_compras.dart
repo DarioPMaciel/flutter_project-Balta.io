@@ -7,7 +7,7 @@ main() {
   //List<String> produtos = []; //LOCAL (mas precisa passar o parametro 'produtos')
   while (condicao) {
     print("===ADICIONE SEUS PRODUTOS===");
-    String? text = stdin.readLineSync();
+    String text = stdin.readLineSync()!;
     if (text == 'sair') {
       print("=== Terminou o Programa===");
       condicao = false;
@@ -16,7 +16,7 @@ main() {
     } else if (text == 'remover') {
       remover();
     } else {
-      produtos.add(text!);
+      produtos.add(text);
       print("\x1B[2J\x1B[0;0H"); //comando para limpar a tela a
     }
   }
