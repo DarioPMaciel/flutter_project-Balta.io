@@ -1,9 +1,10 @@
 import 'dart:io';
 
-main() {
-  List<String> produtos = [];
-  bool condicao = true;
+List<String> produtos = []; //global
 
+main() {
+  bool condicao = true;
+  //List<String> produtos = []; //local (mas precisa passar o parametro 'produtos')
   while (condicao) {
     print("===ADICIONE SEUS PRODUTOS===");
     String? text = stdin.readLineSync();
@@ -11,20 +12,26 @@ main() {
       print("=== Terminou o Programa===");
       condicao = false;
     } else if (text == 'imprimir') {
-      for (var i = 0; i < produtos.length; i++) {
-        print("ITEM $i - ${produtos[i]}");
-      }
+      imprimir();
     } else if (text == 'remover') {
-      print("===Qual produto Remover===");
-      for (var i = 0; i < produtos.length; i++) {
-        print("ITEM $i - ${produtos[i]}");
-      }
-      int item = int.parse(stdin.readLineSync()!);
-      produtos.removeAt(item);
+      remover();
       print("======ITEM REMOVIDO");
     } else {
       produtos.add(text!);
       print("\x1B[2J\x1B[0;0H"); //comando para limpar a tela a
     }
   }
+}
+
+imprimir() {
+  for (var i = 0; i < produtos.length; i++) {
+    print("ITEM $i - ${produtos[i]}");
+  }
+}
+
+remover() {
+  print("===Qual produto Remover===");
+  imprimir();
+  int item = int.parse(stdin.readLineSync()!);
+  produtos.removeAt(item);
 }
