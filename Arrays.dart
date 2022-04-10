@@ -22,6 +22,17 @@ main() {
     print('\n');
   }*/
 
-  var nomes = ["DARIO", "BIA", "ABADIA"];
+  List<String> nomes = ["DARIO", "BIA", "ABADIA"];
+  print(nomes);
   print(nomes.length);
+  nomes.add("José");
+  print(nomes);
+  print(nomes.length);
+
+  //imprimindo expecifico
+  print(nomes[2]);
+  //removendo nomes
+  print(nomes);
+  nomes.remove("BIA"); // ou  //nomes.removeAt(1);
+  print(nomes);
 }
