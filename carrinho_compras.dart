@@ -15,7 +15,6 @@ main() {
       imprimir();
     } else if (text == 'remover') {
       remover();
-      print("======ITEM REMOVIDO");
     } else {
       produtos.add(text!);
       print("\x1B[2J\x1B[0;0H"); //comando para limpar a tela a
@@ -34,4 +33,5 @@ remover() {
   imprimir();
   int item = int.parse(stdin.readLineSync()!);
   produtos.removeAt(item);
+  print("======ITEM REMOVIDO");
 }
