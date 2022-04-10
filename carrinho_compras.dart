@@ -1,10 +1,10 @@
 import 'dart:io';
 
-List<String> produtos = []; //global
+List<String> produtos = []; //GLOBAL
 
 main() {
   bool condicao = true;
-  //List<String> produtos = []; //local (mas precisa passar o parametro 'produtos')
+  //List<String> produtos = []; //LOCAL (mas precisa passar o parametro 'produtos')
   while (condicao) {
     print("===ADICIONE SEUS PRODUTOS===");
     String? text = stdin.readLineSync();
