@@ -16,7 +16,7 @@ main() {
     }
     x++;
   }
-  */
+  
   bool condicao = true;
 
   while (condicao) {
@@ -28,5 +28,5 @@ main() {
     } else {
       print("---Voce   digitou: $text");
     }
-  }
+  }*/
 }
