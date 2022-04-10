@@ -4,6 +4,7 @@ main() {
   /*String nome = "Dario";
   nome = "Bia";*/
 
+/*
   var nome = [];
 
   bool condicao = true;
@@ -19,5 +20,8 @@ main() {
     }
     print(nome);
     print('\n');
-  }
+  }*/
+
+  var nomes = ["DARIO", "BIA", "ABADIA"];
+  print(nomes.length);
 }
